@@ -31,11 +31,13 @@ export class HomeComponent implements OnInit {
   logout(){
     this.authService.doLogout()
     .then((res) => {
-      this.location.back();
+      //this.location.back();
+      this.router.navigate(['/login']);
     }, (error) => {
       console.log("Logout error", error);
     });
   }
+ 
   getData(){
     this.firebaseService.getUsers()
     .subscribe(result => {

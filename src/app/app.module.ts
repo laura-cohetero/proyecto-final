@@ -25,10 +25,11 @@ import { AboutComponent } from './about/about.component';
 import { AuthService } from './core/auth.service';
 import { AuthGuard } from './core/auth.guard';
 import { UserService } from './core/user.service';
-import { PrincipalComponent } from './principal/principal.component';
+//import { PrincipalComponent } from './principal/principal.component';
 import { HomeResolver } from './home/home.resolver';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
+//import { PrincipalComponent } from './principal/principal.component';
 
 
 
@@ -42,7 +43,7 @@ import { from } from 'rxjs';
     HomeComponent,
     LoginComponent,
     AboutComponent,
-    PrincipalComponent
+   // PrincipalComponent
     
   ],
   entryComponents: [AvatarDialogComponent],

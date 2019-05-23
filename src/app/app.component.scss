@@ -1,7 +1,4 @@
-
-
-
-.page-container {
+/*.page-container {
     display: grid;
     grid-template-columns: 60px auto;
     height: 100%;
@@ -22,4 +19,31 @@
     $icon-font-path: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/" !default;
 // Include Bootstrap styles
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
-  }
+  }*/
+  .page-container {
+    display: grid;
+    grid-template-rows: 60px auto;
+    height: 100%;
+    padding: 0px ;
+  
+    .side-bar {
+      background: #852444;
+    
+        .nav-link {
+            color: #FFF;
+            font-size: 28px;//icono
+            
+        }
+       .nav-item{
+          
+          padding-left: 10%;
+          margin-left: 10%;
+         
+
+        }
+    }
+  
+    .content-container {
+      margin-top: 30px;
+    }
+}

@@ -6,12 +6,12 @@ import { EditUserResolver } from './edit-user/edit-user.resolver';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AuthGuard } from './core/auth.guard';
-import { PrincipalComponent } from './principal/principal.component';
+//import { PrincipalComponent } from './principal/principal.component';
 
 export const rootRouterConfig: Routes = [
   //{ path: '',  component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'principal', component: PrincipalComponent },
+ // { path: 'principal', component: PrincipalComponent },
   { path: 'home', component: HomeComponent },
   { path: 'new-user', component: NewUserComponent },
   { path: 'login', component: LoginComponent, canActivate:[AuthGuard] },
