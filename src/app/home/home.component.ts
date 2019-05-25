@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 import { Router, Params } from '@angular/router';
 import { AuthService } from '../core/auth.service';
-import { Location } from '@angular/common';
+//import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     public firebaseService: FirebaseService,
     private router: Router,
     public authService: AuthService,
-    private location : Location
+    //private location : Location
   ) { }
 
   ngOnInit() {
@@ -37,6 +37,8 @@ export class HomeComponent implements OnInit {
       console.log("Logout error", error);
     });
   }
+
+ 
  
   getData(){
     this.firebaseService.getUsers()

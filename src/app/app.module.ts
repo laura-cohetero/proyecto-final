@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { RouterModule } from '@angular/router';
@@ -19,7 +19,7 @@ import { environment } from '../environments/environment';
 import { FirebaseService } from './services/firebase.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatInputModule, MatSliderModule, MatDialogModule } from '@angular/material';
+import {MatButtonModule, MatInputModule, MatSliderModule, MatDialogModule} from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AuthService } from './core/auth.service';
@@ -29,7 +29,7 @@ import { UserService } from './core/user.service';
 import { HomeResolver } from './home/home.resolver';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
-//import { PrincipalComponent } from './principal/principal.component';
+
 
 
 
@@ -43,7 +43,7 @@ import { from } from 'rxjs';
     HomeComponent,
     LoginComponent,
     AboutComponent,
-   // PrincipalComponent
+    
     
   ],
   entryComponents: [AvatarDialogComponent],
@@ -60,9 +60,12 @@ import { from } from 'rxjs';
     MatInputModule,
     MatSliderModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    
+
     
   ],
+
   providers: [
     FirebaseService, 
     EditUserResolver, 
@@ -73,7 +76,8 @@ import { from } from 'rxjs';
   ],
   bootstrap: [AppComponent],
   schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ]
+    NO_ERRORS_SCHEMA,
+   // CUSTOM_ELEMENTS_SCHEMA
+  ],
 })
 export class AppModule { }

@@ -1,21 +1,33 @@
-import { Component } from '@angular/core';
-import { AuthService } from './core/auth.service';
-import { HomeComponent } from './home/home.component';
+import { Component, NgModule } from '@angular/core';
+import { AuthService} from './core/auth.service';
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  
 })
+
+
 export class AppComponent {
   title = 'angular6-firebase-crud';
 constructor(
-  public home: HomeComponent,
-){}
+  public authService: AuthService,
+  
+){
+  this.authService.isLoggedIn();
+}
+ngOnInit() {
+ 
+}
 
+/*
   isLoggedIn(): boolean {
     if (this.home.logout !== null) {
       return true;
     }
-  }
+  }*/
+
 }

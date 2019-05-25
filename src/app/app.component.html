@@ -1,47 +1,50 @@
 
-<div class="page-container">
-	<div class="side-bar">
-		<ul class="nav flex-rows" *ngIf="home.isLoggedIn()" >
+<div class="page-container" >
+		<div class="side-bar" >
+			<ul class="nav flex-rows"  >
+	
+				<li class="nav-item" >
+					<a class="nav-link active" routerLink="home">
+				<!--	<ion-icon name="home"></ion-icon>
+					<mat-icon>home</mat-icon>-->
+					<button class="mdc-icon-button material-icons">home</button>
+					</a>
+					
+				</li>
+				<li class="nav-item" *ngIf="authService.isLoggedIn()" >
+					<a class="nav-link" routerLink="new-user">
+					
+					<button class="mdc-icon-button material-icons">personadd</button>
+					</a>
+					
+				</li>
+				 
+				<li class="nav-item" *ngIf="authService.isLoggedIn()" >
+					<a class="nav-link" routerLink="about">
+					<button class="mdc-icon-button material-icons">information</button>
+					</a>
+				</li>
+
+				<li class="nav-item" *ngIf="authService.isLoggedIn()" >
+					<a class="nav-link" routerLink="login">
+					<!--<ion-icon name="person"></ion-icon>
+					<mat-icon>person</mat-icon>-->
+					<button class="mdc-icon-button material-icons">person</button>
+					</a>
+				</li>
+	
+			</ul>
+			
+		</div><!--class="content-container"-->
+		<main class="content-container">
+			<router-outlet></router-outlet>
+	  </main> 
 		
-			<li class="nav-item" >
-				<a class="nav-link active" routerLink="home">
-				<ion-icon name="home"></ion-icon>
-				</a>
-				
-			</li>
-			<li class="nav-item" >
-				<a class="nav-link" routerLink="new-user">
-				<ion-icon name="person-add"></ion-icon>
-				</a>
-				
-			</li>
-			
-			<li class="nav-item" > 
-				<a class="nav-link" routerLink="about">
-				<ion-icon name="information-circle-outline"></ion-icon>
-				</a>
-			</li>
-			
-			
-				  <!--
-			<li class="nav-item">
-				<a class="nav-link" routerLink="login">
-				<ion-icon name="person"></ion-icon>
-				</a>
-			</li>-->
-
-		</ul>
-	</div>
-	<div class="content-container">
-		<router-outlet></router-outlet>
-	</div>
-	
-  </div>
-
-
-<!--
-<main>
+	  </div>
+	  <!--
+<div class="content-container">
 	<app-principal></app-principal>
-</main>
+
+</div>
 -->
-	
+

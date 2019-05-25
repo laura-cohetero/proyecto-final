@@ -6,9 +6,11 @@ import * as firebase from 'firebase/app';
 @Injectable()
 export class AuthService {
 
-  constructor(
-   public afAuth: AngularFireAuth
+  constructor( 
+   
+    public afAuth: AngularFireAuth
  ){}
+
 
   doFacebookLogin(){
     return new Promise<any>((resolve, reject) => {
@@ -71,7 +73,16 @@ export class AuthService {
       }, err => reject(err))
     })
   }
-
+  isLoggedIn(): boolean {
+    if (firebase.auth() !== null) {
+      return true;
+    }
+  }
+  isLoggedInF(): boolean {
+    if (firebase.auth().currentUser !== null){
+      return false;
+    }
+  }
   doLogout(){
     return new Promise((resolve, reject) => {
       if(firebase.auth().currentUser){
@@ -84,5 +95,5 @@ export class AuthService {
     });
   }
 
-
+ 
 }

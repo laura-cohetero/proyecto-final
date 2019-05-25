@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../core/auth.service'
+import { AuthService } from '../core/auth.service';
 import { Router, Params } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'page-login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.scss']
 })
@@ -16,7 +16,7 @@ export class LoginComponent {
   constructor(
     public authService: AuthService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
   ) {
     this.createForm();
   }
