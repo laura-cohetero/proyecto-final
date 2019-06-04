@@ -74,7 +74,7 @@ export class AuthService {
     })
   }
   isLoggedIn(): boolean {
-    if (firebase.auth() !== null) {
+    if (firebase.auth().currentUser !== null) {
       return true;
     }
   }

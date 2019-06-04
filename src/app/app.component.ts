@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { AuthService} from './core/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -15,12 +16,20 @@ export class AppComponent {
   title = 'angular6-firebase-crud';
 constructor(
   public authService: AuthService,
+  private router: Router,
+ 
   
 ){
-  this.authService.isLoggedIn();
+ // this.authService.isLoggedIn();
 }
-ngOnInit() {
- 
+logout(){
+  this.authService.doLogout()
+  .then((res) => {
+    //this.location.back();
+    this.router.navigate(['/login']);
+  }, (error) => {
+    console.log("Logout error", error);
+  });
 }
 
 /*
