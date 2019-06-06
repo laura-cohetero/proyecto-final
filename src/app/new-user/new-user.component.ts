@@ -60,7 +60,7 @@ export class NewUserComponent implements OnInit {
   }
 
   resetFields(){
-    this.avatarLink = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
+    this.avatarLink = "http://www.nutrisolvite.com/wp-content/uploads/2014/09/productos-alimenticios.png";
     this.exampleForm = this.fb.group({
       name: new FormControl('', Validators.required),
       surname: new FormControl('', Validators.required),

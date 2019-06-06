@@ -1,0 +1,29 @@
+.create-page {
+
+    padding: 20px 60px;
+    .title-content{
+        background-color: rgb(236, 236, 236);
+        text-align: center;
+        color: rgb(148, 144, 144);
+        font-family: cursive;
+        margin: 30px auto;
+        
+    }
+    .page-content {
+        background-color: #FFF;
+        
+
+        .img-acercade {
+            //border-radius: 50%;//para poner la imagen en circulo
+            width: 250px;
+            display: block;
+            margin: 50px auto;
+          }
+        .p{
+            text-align: center;
+            font-size: 24px;
+            border: 4px;
+            font-family: cursive;
+        }
+    }
+}
