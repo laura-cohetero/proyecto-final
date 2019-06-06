@@ -1,16 +1,36 @@
-.header{
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 40px;
+.content-login{
+width: 100%;
+  .container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .page-content {
+      background-color: #9c8d00;
+      height:700px;
+      width:700px;
+      border-radius:400px;
+      
+     .header{
+        text-align: center; 
+        font-size: 30px;
+        //color: rgb(148, 144, 144);
+        font-family: cursive;
+        margin-bottom: 40px;
+      }
+      
+        .row{
+          margin-top: 10px;
+        }
+        
+        .error{
+          color: red;
+        } 
+      }
+
   }
-  
-  .row{
-    margin-top: 10px;
-  }
-  
-  .error{
-    color: red;
-  } 
+ 
+}
   
    $icon-font-path: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/" !default;
 // Include Bootstrap styles
