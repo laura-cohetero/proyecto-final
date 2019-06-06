@@ -13,7 +13,7 @@ import { FirebaseService } from '../services/firebase.service';
 export class NewUserComponent implements OnInit {
 
   exampleForm: FormGroup;
-  avatarLink: string = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
+  avatarLink: string = "http://www.nutrisolvite.com/wp-content/uploads/2014/09/productos-alimenticios.png";
 
   validation_messages = {
    'name': [

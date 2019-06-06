@@ -5,12 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-   /* apiKey: "AIzaSyBMOaRr0NirNOX-eh2ITJBHUpL3ow8Hr4w",
-    authDomain: "splendid-ground-95214.firebaseapp.com",
-    databaseURL: "https://splendid-ground-95214.firebaseio.com",
-    projectId: "splendid-ground-95214",
-    storageBucket: "",
-    messagingSenderId: "429226112331"*/
+  
     apiKey: "AIzaSyC7NuGaOIll7llCM8l8eWmPUI1CXhtQxfI",
     authDomain: "appangular-firebase.firebaseapp.com",
     databaseURL: "https://appangular-firebase.firebaseio.com",
